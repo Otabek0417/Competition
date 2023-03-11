@@ -1,0 +1,262 @@
+.main {
+  margin-top: 50px;
+  .hero {
+    margin-bottom: 12.1rem;
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 695px;
+    }
+    &--title {
+      color: $color-000000;
+      margin-bottom: 4rem;
+    }
+    &--text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-000000;
+      margin-bottom: 18rem;
+    }
+    &-btn {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: $color-929292;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 70px;
+        height: 70px;
+        background: #6911ad;
+        border-radius: 141px;
+      }
+    }
+  }
+
+  .about__company {
+    margin-bottom: 9.5rem;
+    .about__company--container {
+      display: flex;
+      align-items: center;
+
+      @include responsive(tablet) {
+        flex-direction: column;
+        justify-content: center;
+      }
+      .about__company--wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 570px;
+        margin-right: auto;
+        .about__company--title {
+          color: $color-000000;
+          margin-bottom: 2rem;
+
+          @include responsive(tablet) {
+            text-align: center;
+          }
+        }
+        .about__company--desc {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 140%;
+          color: $color-000000;
+          &:nth-child(2) {
+            margin-bottom: 3rem;
+          }
+          &:nth-child(3) {
+            @include responsive(tablet) {
+              margin-bottom: 5.8rem;
+            }
+          }
+        }
+      }
+
+      .about__company--right {
+        width: 100%;
+        max-width: 570px;
+        .about__company--list {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 3rem;
+          justify-content: center;
+
+          @include responsive(tablet) {
+            justify-content: center;
+          }
+        }
+        .about__company--item {
+          width: 100%;
+          max-width: 265px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include responsive(tablet) {
+            max-width: 170px;
+          }
+        }
+        .about__company--item--title {
+          background: $color-linear;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          margin-bottom: 1.2rem;
+        }
+
+        .about__company--item--subtitle {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 2rem;
+          line-height: 2.6rem;
+          text-align: center;
+          color: $color-000000;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .completed {
+    margin-bottom: 23rem;
+  }
+  .advantages {
+    margin-bottom: 12rem;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &--title {
+      text-align: center;
+      color: $color-000000;
+      margin-bottom: 4rem;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: center;
+    }
+    &__item {
+      width: 100%;
+      max-width: 433px;
+      background: rgba(243, 243, 243, 0.5);
+      border: 1px solid $color-999999;
+      backdrop-filter: blur(2.5px);
+      border-radius: 20px;
+      padding: 3.1rem 2.3rem 2.4rem 3.1rem;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: 5px 4px 14px rgba(0, 0, 0, 0.55);
+      }
+      @include responsive(tablet) {
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+
+      &--title {
+        color: $color-000000;
+        margin-bottom: 1rem;
+        margin-top: 3.6rem;
+      }
+
+      &--text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: $color-000000;
+      }
+    }
+    &__line {
+      background: $color-686464;
+      width: 50px;
+      height: 3px;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .services {
+    .services__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 12.1rem 8.9rem;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid $color-999999;
+      backdrop-filter: blur(1px);
+      border-radius: 20px;
+      margin-bottom: 12rem;
+    }
+    .services__title {
+      text-align: center;
+      color: $color-000000;
+      margin-bottom: 8.8rem;
+    }
+    .services__list {
+      display: flex;
+      align-items: center;
+      gap: 12rem 10.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .services__item {
+        width: 100%;
+        max-width: 299px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .services__item--title {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .services__item--text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: -0.500211px;
+        color: rgba(39, 39, 39, 0.7);
+        text-align: center;
+      }
+    }
+  }
+}
+
+/***************** bg image for  retina screen ***************************/
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+}

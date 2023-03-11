@@ -1,0 +1,51 @@
+.btn {
+  cursor: pointer;
+  border: 0;
+  background: #6911ad;
+  border-radius: 7px;
+  @include font(700, 1.6rem, 1.9rem, normal);
+  color: #ffffff;
+  padding: 1.2rem 2.1rem 1.4rem 2.1rem;
+
+  @include media(890px) {
+    display: none;
+  }
+
+  .mobile_btn--link {
+    display: none;
+    @include responsive(mobile) {
+      display: block;
+    }
+  }
+
+  .desctop_btn--link {
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+  // @include responsive(mobile) {
+  //     @include font(700, 3.2rem, 3.9rem, normal);
+  //     color: #fff;
+  // }
+}
+
+.burger_open {
+  display: none;
+  border: 0;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 2rem 2rem 2rem 0;
+
+  svg {
+    font-size: 40px;
+  }
+
+  @include media(890px) {
+    display: block;
+  }
+}

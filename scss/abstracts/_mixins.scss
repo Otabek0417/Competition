@@ -1,0 +1,47 @@
+// font for text
+@mixin font($weight, $size, $lineHeight, $letter) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineHeight;
+    letter-spacing: $letter;
+}
+
+// nav link hover effects
+@mixin navLinkHover($hovercolor) {
+    color: $hovercolor;
+}
+
+// button
+@mixin btn($color, $background, $borderRadius, $pt, $pr, $pb, $pl) {
+    color: $color;
+    background: $background;
+    border-radius: $borderRadius;
+    padding: $pt $pr $pb $pl;
+}
+
+// display grid
+@mixin displayGrid($mincontent, $howManyFR, $rowGap, $columnGap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($mincontent, $howManyFR));
+    gap: $rowGap $columnGap;
+}
+
+// responsive
+@mixin responsive($deviceType) {
+    @if $deviceType == tablet {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    } @else if $deviceType == mobile {
+        @media screen and (max-width: 425px) {
+            @content;
+        }
+    }
+}
+
+// responsive media
+@mixin media($maxwith) {
+    @media screen and (max-width: $maxwith) {
+        @content;
+    }
+}

@@ -1,0 +1,55 @@
+h1 {
+  margin: 0;
+  //variables 4 => $weight, $fontsize, $lineheight, $letter-spacing
+  @include font(600, 4.8rem, 5.8rem, normal);
+
+  // @include responsive(mobile) {
+  //     @include font(100, 4rem, 4.7rem, -0.714286px);
+  // }
+
+  // font-style: normal;
+}
+
+h2 {
+  margin: 0;
+
+  //variables 4 => $weight, $fontsize, $lineheight, $letter-spacing
+  @include font(600, 5rem, 6.4rem, normal);
+
+  @include responsive(mobile) {
+    @include font(600, 2.4rem, 3.1rem, normal);
+  }
+}
+
+h3 {
+  margin: 0;
+
+  //variables 4 => $weight, $fontsize, $lineheight, $letter-spacing
+  @include font(700, 3.6rem, 4.4rem, normal);
+
+  @include responsive(mobile) {
+    @include font(700, 2.4rem, 2.9rem, normal);
+  }
+}
+
+h4 {
+  margin: 0;
+
+  //variables 4 => $weight, $fontsize, $lineheight, $letter-spacing
+  @include font(700, 2.4rem, 2.9rem, normal);
+
+  @include responsive(mobile) {
+    @include font(700, 2rem, 2.4rem, normal);
+  }
+}
+
+h5 {
+  margin: 0;
+
+  //variables 4 => $weight, $fontsize, $lineheight, $letter-spacing
+  @include font(600, 5rem, 5rem, normal);
+
+  @include responsive(mobile) {
+    @include font(700, 3.6rem, 3.6rem, normal);
+  }
+}
